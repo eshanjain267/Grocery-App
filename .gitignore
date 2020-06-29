@@ -1,6 +1,4 @@
 # Eclipse
-*.properties
-.properties
 .classpath
 .project
 .settings/
@@ -25,4 +23,3 @@ target/
 *.log
 
 node_modules
-*/application.properties
