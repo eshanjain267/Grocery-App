@@ -1,0 +1,27 @@
+initial requirement ->  create product ==>> 
+** should be initially added **
+[master_category]
+[id, categoryName, ]
+
+[master_brand]
+[id, brandName]
+
+Admin
+--------
+*Add product in product_tbl, 
+   --> *update, delete, checkById, checkByCatergory, checkByBrand, checkIsAdded
+   --> checkProduct(shopId) 
+
+admin_productcontroller_tbl
+--> add product in productController[prductId, adminId]
+      *checkAlreadyExist(isAdded != true)
+      
+
+Shop
+------
+   *AddShop() ==> addedBy admin only do curd operation to add new table by shopId_name_tbl.
+   *addProductToShop() ==> shopId, productId, categoryId, brandId, MRP, unitPrice, quantity
+
+
+Customer
+------------

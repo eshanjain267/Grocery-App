@@ -1,0 +1,28 @@
+# Eclipse
+*.properties
+.properties
+.classpath
+.project
+.settings/
+ *.zip
+# Intellij
+.idea/
+*.iml
+*.iws
+ *.zip
+bin
+.zip
+
+proxy-service.zip
+login-service.zip
+
+# Mac
+.DS_Store
+ 
+# Maven
+log/
+target/
+*.log
+
+node_modules
+*/application.properties

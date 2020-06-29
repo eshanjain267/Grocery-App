@@ -1,0 +1,9 @@
+@Eshan
+
+Interface_UI
+
+Menu -> shopList [ shopId]
+                       --> [category like bicuit, flour] [Subcategory] oil -> 
+                       -->
+----------------------------------------------------------------------------------------------------------------
+                                   

@@ -1,0 +1,23 @@
+* column name seperated by _ and all capital.
+
+[admin_productcontroller_tbl]
+[prductId, adminId] 
+
+[product_tbl]
+[id, productId, itemId, categoryId, brandId, name, descreption, weight, unitID, isadded, isDeleted]
+
+[master_category]
+[id, categoryName, ]
+
+[master_brand]
+[id, brandName]
+
+* when someone add product*
+tbl = shopName_Shopid
+[shopId_productcontroller_tbl]
+[id, shopId, productId, categoryId,  brandId, itemId, MRP, unitPrice, quantity ]
+
+[shop_tbl]
+[id, name, address, state, city, locality, ownerName, ContactNo., isVarified, addedByAdminId]
+
+[ master_city], [master_state], 

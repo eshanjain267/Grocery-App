@@ -1,0 +1,103 @@
+Food delivery
+ROLE -> Admin, shops, customer 
+
+Shop -> profile, ShopAdmin, stock management,  shop varification
+Customer  -> profile
+
+google outh token, data handling, Ui
+
+----------------------------------------------------------------------------------------------------
+https://github.com/tarun-developer/TruYum
+https://github.com/eshanjain267
+-----------------------------------------------------------------------------------------------------
+
+Requirement
+-------------------
+mysql, 
+springboot, microservice
+
+Backend 
+----------------
+Curd ops, graph analysis(2nd Step)
+--> Admin
+profile
+create shop
+
+---> shop
+profile
+Add Item
+Update Stock
+
+---> customer
+order
+profile
+
+
+---> Access 
+/admin/ ? token?="token" access/not
+/user/? token="token" access/not
+
+ --> SHOULD CREATE ESSENTIAL TABLE WITH FIELD <--
+
+table for user, shop, admin
+table Items ->  price/kg,  packed Item, Oil, (UI Loose item categories loose/packet) avaibility , name, Id, stock,
+                             Loose item) price/per kg,( 10, 25 50 100 250 500 1000 in gram) 
+                             Unit(kg/ liter)
+                             -> companyId, productId, productVariant, shopId, 
+                                       {(id) -> quantity} (unique product -> [3 merge], Stock also manage using this
+                            -> itemQuantity,  ItemID(which), 
+                            -> record manngement
+                            -> previous order
+                            -> cart mangement   
+                            -> open timing, opening, gtm, open, close, status, (Shop responsibility) 
+
+++++++++++++++++
+// mysql, postgers
+ ----> Real data pe kamm @-> https://www.barcodelookup.com/tata-tea
+ ----> we have to find item uniquely based on productId, companyId, itemId, categoryId
+( All capital colmun capital )
+
+ Stock Keeping Units (SKUs) 
+
+** here what we are trying to do is shop can only create product that available in master_table_admin**
+
+[  master_table_product ] 
+[ id, productId, sku, companyId, itemId, productName , image_url, unitWeight, categoryId, ranking, isDeleted, updateDate, insertedDate]
+
+---> costVery shop to shop
+---> sku-shopid find product
+---> ranking on each shop
+---> ranking based on type
+--> ranking of product in shop
+
+ --> [apan se assure kar ke rhkege ki product ache brand ka ho, packet item ho, different weight me available ho ]
+
+
+[ master_table _category ]
+[ id, type, isDeleted, updateDate, insertedDate]
+
+[ master_table _company ]
+[ id, name, isDeleted, updateDate, insertedDate]
+
+
+[table_shopDetails]
+[id, name, details, image_url, type, isVarified, isDeleted, updateDate, insertedDate]
+
+[ table_shop ](sku ??)
+[id, shopDetailsId, productId, discount, reorderLevel, stockId] (shopDetailsId, productId  -->unique shopproduct)
+
+[ table_stock ]
+[ id, unitInStock, wieght ]
+
+[ table_admin ]
+[ id, userName, password, email, mobileNo, otp, isVarified, address, pin, isDeleted]
+
+[ table_user ]
+[ id, userName, password, email, mobileNo, otp, isVarified, address, pin, isDeleted]
+
+[master_country][master_city]
+
+
+----------------------------------
+----------------------------------
+Future Updation -> create supplier, imageOptimization, managelooseItem
